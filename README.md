@@ -11,3 +11,7 @@
 ### operadores aritmeticos
 
 ![image](https://user-images.githubusercontent.com/107776531/198418046-63555b1f-1c78-489c-8132-1438d304398c.png)
+
+### super calculadora
+
+![image](https://user-images.githubusercontent.com/107776531/198419908-e4bd1b2b-969b-4707-a177-bd6072e5f660.png)
