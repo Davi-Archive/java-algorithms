@@ -1,5 +1,10 @@
 # Algorithms created and resolved in Java
 
+## fatorador
+
+![image](https://user-images.githubusercontent.com/107776531/198814519-b2cd7189-9282-4ceb-8e2c-b32dead8932c.png)
+
+
 ### calc-idade-swing
 
 ![image](https://user-images.githubusercontent.com/107776531/198417988-205e6cc0-5af5-4dfe-8aee-95d01872d68b.png)
