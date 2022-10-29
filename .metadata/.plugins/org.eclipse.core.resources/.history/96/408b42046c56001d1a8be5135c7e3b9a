@@ -1,0 +1,10 @@
+
+public class Loops {
+
+	public static void main(String[] args) {
+		Scanner teclado = new Scanner
+		System.out.println("Hi, fuck you "+ num);
+
+	}
+
+}

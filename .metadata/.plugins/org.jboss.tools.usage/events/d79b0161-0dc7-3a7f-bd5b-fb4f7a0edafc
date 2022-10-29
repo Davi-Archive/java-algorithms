@@ -1,0 +1,11 @@
+#Fri Oct 28 20:17:07 BRT 2022
+a=finishWizard
+c=0
+cl=org.eclipse.wb.internal.swing.wizards.frame.NewJFrameWizard
+cmp=usage
+ct=jbt
+d=1666999027975
+l=Wizard class name
+s=3
+v=2.2.500
+vl=How many times the 'Finish' button pressed during the day

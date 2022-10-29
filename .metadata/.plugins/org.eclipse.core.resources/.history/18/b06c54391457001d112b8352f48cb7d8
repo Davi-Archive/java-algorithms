@@ -1,0 +1,139 @@
+package com.voto.obrigatorio;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.SwingConstants;
+import javax.swing.JSpinner;
+import java.awt.Font;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.SpinnerNumberModel;
+
+public class VotoJanela extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					VotoJanela frame = new VotoJanela();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public VotoJanela() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 780, 346);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+
+		JPanel bebe = new JPanel();
+		bebe.setBounds(56, 99, 127, 253);
+		contentPane.add(bebe);
+
+		JLabel lblNewLabel_1 = new JLabel("");
+		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\Dave\\Desktop\\votoimg\\bebe22.png"));
+		bebe.add(lblNewLabel_1);
+
+		JPanel opcional = new JPanel();
+		opcional.setBounds(178, 23, 169, 288);
+		contentPane.add(opcional);
+
+		JLabel lblNewLabel_1_1 = new JLabel("");
+		lblNewLabel_1_1.setIcon(new ImageIcon("C:\\Users\\Dave\\Desktop\\votoimg\\16.png"));
+		opcional.add(lblNewLabel_1_1);
+
+		JPanel adulto = new JPanel();
+		adulto.setBounds(502, 11, 218, 288);
+		contentPane.add(adulto);
+
+		JLabel lblNewLabel_1_2 = new JLabel("");
+		lblNewLabel_1_2.setIcon(new ImageIcon("C:\\Users\\Dave\\Desktop\\votoimg\\70.png"));
+		adulto.add(lblNewLabel_1_2);
+
+		JPanel seta = new JPanel();
+		seta.setBounds(24, 161, 730, 56);
+		contentPane.add(seta);
+
+		bebe.setVisible(false);
+		opcional.setVisible(false);
+		adulto.setVisible(false);
+		seta.setVisible(false);
+
+		JLabel lblSeta = new JLabel("");
+		lblSeta.setIcon(new ImageIcon("C:\\Users\\Dave\\Desktop\\votoimg\\linha.png"));
+		seta.add(lblSeta);
+		
+		JLabel lblNewLabel = new JLabel("New label");
+		seta.add(lblNewLabel);
+
+		JLabel lblVoto = new JLabel("");
+		lblVoto.setFont(new Font("Roboto Lt", Font.BOLD, 28));
+		lblVoto.setEnabled(false);
+		lblVoto.setHorizontalAlignment(SwingConstants.CENTER);
+		lblVoto.setBounds(10, 11, 158, 77);
+		contentPane.add(lblVoto);
+
+		JSpinner spinner = new JSpinner();
+		spinner.setModel(new SpinnerNumberModel(1, 1, 150, 1));
+		spinner.setFont(new Font("Times New Roman", Font.PLAIN, 42));
+		spinner.setBounds(389, 99, 79, 51);
+		contentPane.add(spinner);
+
+		JLabel lblNewLabel_2 = new JLabel("Qual sua idade?");
+		lblNewLabel_2.setBounds(376, 59, 108, 29);
+		contentPane.add(lblNewLabel_2);
+
+		JButton btnNewButton = new JButton("Voto é obrigatorio?");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				int idade = (int) spinner.getValue();
+
+				if (idade < 16) {
+					bebe.setVisible(true);
+					adulto.setVisible(false);
+					opcional.setVisible(false);
+					lblVoto.setText("Voto É PROIBIDO, NÃO VOTE!!!!.");
+				} else if ((idade >= 16) && (idade < 18)) {
+					bebe.setVisible(false);
+					adulto.setVisible(false);
+					opcional.setVisible(true);
+					lblVoto.setText("Voto é Opcional.");
+				} else if ((idade >= 18) && (idade < 60)) {
+					bebe.setVisible(false);
+					adulto.setVisible(true);
+					opcional.setVisible(false);
+					lblVoto.setText("Voto é OBRIGATORIO.");
+				} else {
+					bebe.setVisible(false);
+					adulto.setVisible(true);
+					opcional.setVisible(false);
+					lblVoto.setText("Voto é Opcional.");
+				}	
+				seta.setVisible(true);
+			}
+		});
+		btnNewButton.setBounds(357, 228, 127, 71);
+		contentPane.add(btnNewButton);
+	}
+}

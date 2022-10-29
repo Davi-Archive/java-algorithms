@@ -1,0 +1,11 @@
+package com.contador.cc;
+
+public class Contador {
+	public static void main(String[] args) {
+		int cc = 1;
+		while(cc<20) {
+			System.out.println("Número é: "+ cc);
+			cc++;
+		}
+	}
+}

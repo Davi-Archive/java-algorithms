@@ -1,0 +1,15 @@
+package com.contador.cc;
+
+public class Contador {
+	public static void main(String[] args) {
+		int cc = 1;
+		while(cc<=20) {
+			cc++;
+			if(cc==3 || cc==5 || cc== 17 || cc== 19) {
+				continue;
+			}
+			System.out.println("Número é: "+ cc);	
+			
+		}
+	}
+}

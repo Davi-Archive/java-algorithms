@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class Loops {
+
+	public static void main(String[] args) {
+		Scanner teclado = new Scanner(System.in);
+		System.out.println("Insira um numero: ");
+		int n1 = teclado.nextInt();
+		while()
+		System.out.println("O número inserido foi: "+n1);
+		teclado.close();
+
+	}
+
+}

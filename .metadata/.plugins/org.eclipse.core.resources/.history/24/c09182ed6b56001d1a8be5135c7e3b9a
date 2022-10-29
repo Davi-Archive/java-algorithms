@@ -1,0 +1,10 @@
+
+public class Loops {
+
+	public static void main(String[] args) {
+		int num = 10%2;
+		System.out.println("Hi, fuck you");
+
+	}
+
+}
